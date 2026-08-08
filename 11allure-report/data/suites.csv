@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","7294","@smoke smoke test 2","chromium","2026-07-29","passed","2026-07-29","","PlaywrightLearning\tags.spec.js","",""
+"","7499","@smoke -- smoke test 5","chromium","2026-07-29","passed","2026-07-29","","PlaywrightLearning\tags.spec.js","",""
+"","8667","@sanity @smoke test 3","chromium","2026-07-29","passed","2026-07-29","","PlaywrightLearning\tags.spec.js","",""
+"","7489","smoke test 4","chromium","2026-07-29","passed","2026-07-29","","PlaywrightLearning\tags.spec.js","",""
+"","8568","@smoke - Smoke test 1","chromium","2026-07-29","passed","2026-07-29","","PlaywrightLearning\tags.spec.js","",""

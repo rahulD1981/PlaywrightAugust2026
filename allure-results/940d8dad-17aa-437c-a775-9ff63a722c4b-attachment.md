@@ -1,0 +1,41 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: JavaScript\test.spec.js >> Under Test
+- Location: tests\JavaScript\test.spec.js:5:1
+
+# Error details
+
+```
+TypeError: Cannot read properties of undefined (reading 'max')
+```
+
+# Test source
+
+```ts
+  1  | 
+  2  | const { test, expect } = require('@playwright/test');
+  3  | 
+  4  | 
+  5  | test('Under Test', async ({ page }) => {
+  6  | const arr2 = [1,2,3,4,5];
+  7  | const minvalu = Math.min(...arr2);
+> 8  | const maxvalue = Math.Math.max(...arr2);
+     |                            ^ TypeError: Cannot read properties of undefined (reading 'max')
+  9  | 
+  10 | for (let i = minvalu; i < maxvalue; i++) {
+  11 |     console.log(i);
+  12 |     if (arr2.indexOf("value of i is : " + i) === -1) {
+  13 |         const missingValue = i;
+  14 |         console.log(missingValue);
+  15 |     }
+  16 | }
+  17 | });
+  18 | 
+  19 | 
+```

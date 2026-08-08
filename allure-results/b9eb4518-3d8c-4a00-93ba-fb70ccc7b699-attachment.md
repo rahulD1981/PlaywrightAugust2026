@@ -1,0 +1,31 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: JavaScript\DuplicateElements.spec.js >> Find Duplicates in an array
+- Location: tests\JavaScript\DuplicateElements.spec.js:5:1
+
+# Error details
+
+```
+ReferenceError: ele is not defined
+```
+
+# Test source
+
+```ts
+  1 | const { test, expect } = require('@playwright/test');
+  2 | 
+  3 | test.describe.configure({mode:'parallel'}); // run all test cases in parallel modes
+  4 | 
+  5 | test('Find Duplicates in an array', async ({ page }) => {
+  6 |     const arrays = [11, 22, 44, 77];
+> 7 |     const duplicates = arrays.filter((ele,index,arr)>>arr.indexof(ele)!==index);
+    |                                       ^ ReferenceError: ele is not defined
+  8 |     console.log(duplicates);
+  9 | });
+```
