@@ -1,0 +1,3 @@
+Username: dummyUser2
+Password: dummyPass2
+Product: Product B

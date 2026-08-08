@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "scripts": {
-    "test:master": "playwright test --grep @master", 
-    "test:sanity": "playwright test --grep @sanity", 
-    "test:regression": "playwright test --grep @regression", 
-    "test:datadriven": "playwright test --grep @datadriven", 
-    "test:master:headed": "playwright test --grep @master --headed", 
-    "test:sanity:debug": "playwright test --grep @sanity --debug" 
-  },
+  "scripts": {
+  "test:master": "playwright test --grep @master",
+  "test:sanity": "playwright test --grep @sanity",
+  "test:regression": "playwright test --grep @regression",
+  "test:datadriven": "playwright test --grep @datadriven",
+  "test:master:headed": "playwright test --grep @master --headed",
+  "test:sanity:debug": "playwright test --grep @sanity --debug",
+  "pretest:tags": "set PLAYWRIGHT_BROWSERS_PATH=0 && npx playwright install --with-deps",
+  "test:tags": "set PLAYWRIGHT_BROWSERS_PATH=0 && playwright test tests/PlaywrightLearning/tables.spec.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

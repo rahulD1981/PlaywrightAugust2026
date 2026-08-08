@@ -7,7 +7,7 @@ console.log("Smoke test 1 executed successfully");
 
 });
 
-test('@smoke smoke test 2', async ({ page }) => {
+test('@smokesmoke test 2', async ({ page }) => {
 await page.goto("https://testautomationpractice.blogspot.com/");
 await page.waitForSelector('#name');
 console.log("Smoke test 2 executed successfully");
