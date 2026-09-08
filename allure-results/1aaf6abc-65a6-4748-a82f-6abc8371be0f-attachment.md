@@ -1,0 +1,88 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: apitesting\test1.spec.js >> API Testing 1
+- Location: tests\apitesting\test1.spec.js:58:1
+
+# Error details
+
+```
+Error: apiRequestContext.post: Target page, context or browser has been closed
+```
+
+# Test source
+
+```ts
+  1  | 
+  2  | const { test, expect, request } = require('@playwright/test');
+  3  | let token;
+  4  | let orderId;
+  5  | const loginPayload = {
+  6  |   userEmail: 'jobsforrahuld@gmail.com',
+  7  |   userPassword: 'Riyaansh2011*'
+  8  | };
+  9  | 
+  10 | test.beforeAll(async () => {
+  11 |   const apiContext = await request.newContext();
+  12 |   // imp note : after u login then whatever url comes in Headers >> Request url paste its
+  13 |   const loginResponse = await apiContext.post('https://rahulshettyacademy.com/api/ecom/auth/login', {
+  14 |     data: JSON.stringify(loginPayload),
+  15 |     headers: {
+  16 |       'Content-Type': 'application/json',
+  17 |       'Accept': 'application/json',
+  18 |       'Origin': 'https://rahulshettyacademy.com',
+  19 |       'Referer': 'https://rahulshettyacademy.com/client/#/auth/login'
+  20 |     }
+  21 |   });
+  22 |   console.log('login status', loginResponse.status());
+  23 |   const loginResponseJson = await loginResponse.json();
+  24 |   console.log(loginResponseJson);
+  25 |   expect(loginResponse.ok()).toBeTruthy();
+  26 |   token = loginResponseJson.token;
+  27 |   expect(token).toBeTruthy();
+  28 |   await apiContext.dispose();
+  29 | 
+  30 | 
+  31 |   //create order
+  32 |   const orderPayload = {
+  33 |     "orders": [
+  34 |       {
+  35 |         "country": "Cuba",
+  36 |         "productOrderedId": "6a7c6aac85b8849b494496d2 "
+  37 |       }
+  38 |     ]
+  39 |   };
+  40 | 
+> 41 |   const orderResponse = await apiContext.post('https://rahulshettyacademy.com/api/ecom/order/create-order', {
+     |                                          ^ Error: apiRequestContext.post: Target page, context or browser has been closed
+  42 |     data: JSON.stringify(orderPayload),
+  43 |     headers: {
+  44 |         'Authorization': token,
+  45 |       'Content-Type': 'application/json',
+  46 |       'Accept': 'application/json',
+  47 |       'Origin': 'https://rahulshettyacademy.com',
+  48 |       'Referer': 'https://rahulshettyacademy.com/client/#/auth/login'
+  49 |     }
+  50 |   });
+  51 |   console.log('order status', orderResponse.status());
+  52 |   const orderResponseJson = await orderResponse.json();
+  53 |   console.log(orderResponseJson);
+  54 |   orderId = orderResponseJson.orders[0];
+  55 | });
+  56 | 
+  57 | 
+  58 | test('API Testing 1', async ({ page }) => {
+  59 |   await page.addInitScript(value => {
+  60 |     window.localStorage.setItem('token', value);
+  61 |   }, token);
+  62 | 
+  63 |   await page.goto('https://rahulshettyacademy.com/client/#/dashboard/dash');
+  64 |   await page.waitForLoadState('networkidle');
+  65 |   page.screenshot({ path: 'screenshot.png' });
+  66 | });
+```

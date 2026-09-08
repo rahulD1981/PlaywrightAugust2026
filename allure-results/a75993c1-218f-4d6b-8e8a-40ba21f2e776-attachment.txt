@@ -1,0 +1,20 @@
+login status 200
+{
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODViY2ExZDEyOWUyNTAyNThiNWZlMWEiLCJ1c2VyRW1haWwiOiJqb2JzZm9ycmFodWxkQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjgwMDc3NzYxMjQsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODY1NDA1MDMsImV4cCI6MTgxODA5ODEwM30.h3hGKv_6AFgb0ENvW2oKKAWD_QOm7Pm6U-7NoSYnSHo',
+  userId: '685bca1d129e250258b5fe1a',
+  message: 'Login Successfully'
+}
+order status 500
+{
+  type: 'Something Went Wrong',
+  message: {
+    stringValue: '"6a7c6aac85b8849b494496d2 "',
+    valueType: 'string',
+    kind: 'ObjectId',
+    value: '6a7c6aac85b8849b494496d2 ',
+    path: '_id',
+    reason: {},
+    name: 'CastError',
+    message: 'Cast to ObjectId failed for value "6a7c6aac85b8849b494496d2 " (type string) at path "_id" for model "Product"'
+  }
+}

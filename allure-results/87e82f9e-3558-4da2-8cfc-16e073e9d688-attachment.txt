@@ -1,0 +1,9 @@
+[ { country: 'Cuba', productOrderedId: '67a8dde5c0d3e6622a297cc8' } ]
+Cuba
+67a8dde5c0d3e6622a297cc8
+Cuba
+67a8dde5c0d3e6622a297cc8
+Country name is Cuba
+Order name is 67a8dde5c0d3e6622a297cc8
+----Cuba
+----67a8dde5c0d3e6622a297cc8

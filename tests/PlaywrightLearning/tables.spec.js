@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 
-test.describe.configure({mode:'parallel'}); // run all test cases in parallel modes
+//test.describe.configure({mode:'parallel'}); // run all test cases in parallel modes
 
 test('Table functionality Automation', async ({ page }) => {
 await page.goto('https://demoqa.com/webtables');
@@ -25,8 +25,11 @@ test('Table Find name and then age of that person', async ({ page }) => {
 
 await page.goto('https://demoqa.com/webtables');
 
-const rowPath  =  await page.locator('.-striped.-highlight.table.table-striped.table-bordered.table-hover tbody tr');
+//note below syntax selects entire row, this entire row is saved as a locator with some xpath or css value
+    // this will be used later to find age s
+const rowPath  =  await page.locator('.-striped.-highlight.table.table-striped.table-bordered.table-hover tbody tr');//selects entire row
 const RowSize = await page.locator('.-striped.-highlight.table.table-striped.table-bordered.table-hover tbody tr').count();
+console.log("Row path is : " + rowPath);
 console.log("Row Size is : " + RowSize);
 
 const columData = await page.locator('.-striped.-highlight.table.table-striped.table-bordered.table-hover tbody tr td:nth-child(2)');
@@ -37,7 +40,7 @@ const columnText =  await columData.nth(i).textContent();
 console.log("Column Data is : " + columnText);
 if(columnText === 'Gentry') {
 //From above entire row path which is taken. then nth logic and column number is taken. based on rowpath.nth(i) it navigates to that row
-const ageText = await n.nth(i).locator('td:nth-child(3)').textContent();
+const ageText = await rowPath.nth(i).locator('td:nth-child(3)').textContent();
 console.log("Age of Gentry is : " + ageText); 
 }
 

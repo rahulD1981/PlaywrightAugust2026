@@ -1,0 +1,6 @@
+login status 200
+{
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODViY2ExZDEyOWUyNTAyNThiNWZlMWEiLCJ1c2VyRW1haWwiOiJqb2JzZm9ycmFodWxkQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjgwMDc3NzYxMjQsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODY1MzgwMjIsImV4cCI6MTgxODA5NTYyMn0.V9zwXp9WNR5AcccpSfRkU7kFlLyLPXaIUub_LuBey2I',
+  userId: '685bca1d129e250258b5fe1a',
+  message: 'Login Successfully'
+}

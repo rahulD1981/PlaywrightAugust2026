@@ -1,0 +1,8 @@
+login status 200
+{
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODViY2ExZDEyOWUyNTAyNThiNWZlMWEiLCJ1c2VyRW1haWwiOiJqb2JzZm9ycmFodWxkQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjgwMDc3NzYxMjQsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODY1NDE5NTUsImV4cCI6MTgxODA5OTU1NX0.WGIhHYpEJ1qqh1MZTNAI8CCi6msiiv2HYG0zJdU3NYI',
+  userId: '685bca1d129e250258b5fe1a',
+  message: 'Login Successfully'
+}
+product list status 401
+{ type: 'Invalid', message: 'Access denied. No token provided.' }

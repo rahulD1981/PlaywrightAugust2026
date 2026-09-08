@@ -4,26 +4,41 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test:master": "playwright test --grep @master",
-  "test:sanity": "playwright test --grep @sanity",
-  "test:regression": "playwright test --grep @regression",
-  "test:datadriven": "playwright test --grep @datadriven",
-  "test:master:headed": "playwright test --grep @master --headed",
-  "test:sanity:debug": "playwright test --grep @sanity --debug",
-  "pretest:tags": "set PLAYWRIGHT_BROWSERS_PATH=0 && npx playwright install --with-deps",
-  "test:tags": "set PLAYWRIGHT_BROWSERS_PATH=0 && playwright test tests/PlaywrightLearning/tables.spec.js"
-},
+    "test:master": "playwright test --grep @master",
+    "test:sanity": "playwright test --grep @sanity",
+    "test:regression": "playwright test --grep @regression",
+    "test:datadriven": "playwright test --grep @datadriven",
+    "test:master:headed": "playwright test --grep @master --headed",
+    "test:sanity:debug": "playwright test --grep @sanity --debug",
+    "test:intro": "playwright test tests/Typescript/intro.spec.ts",
+    "pretest:tags": "set PLAYWRIGHT_BROWSERS_PATH=0 && npx playwright install --with-deps",
+    "test:tags": "set PLAYWRIGHT_BROWSERS_PATH=0 && playwright test tests/PlaywrightLearning/tables.spec.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.62.0",
-    "allure-playwright": "^3.10.2"
+    "allure-playwright": "^3.10.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "@faker-js/faker": "^10.5.0",
     "csv-parse": "^7.0.1",
     "xlsx": "^0.18.5"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulD1981/PlaywrightAugust2026.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rahulD1981/PlaywrightAugust2026/issues"
+  },
+  "homepage": "https://github.com/rahulD1981/PlaywrightAugust2026#readme"
 }

@@ -1,0 +1,64 @@
+login status 200
+{
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODViY2ExZDEyOWUyNTAyNThiNWZlMWEiLCJ1c2VyRW1haWwiOiJqb2JzZm9ycmFodWxkQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjgwMDc3NzYxMjQsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODY1NDI0MzMsImV4cCI6MTgxODEwMDAzM30.GNsysIKF9Wn2Ha4Gv9tYon8ghNLzalWCi8ijFgtM0Sg',
+  userId: '685bca1d129e250258b5fe1a',
+  message: 'Login Successfully'
+}
+product list status 200
+{
+  data: [
+    {
+      _id: '6960eae1c941646b7a8b3ed3',
+      productName: 'ADIDAS ORIGINAL',
+      productCategory: 'electronics',
+      productSubCategory: 'mobiles',
+      productPrice: 11500,
+      productDescription: 'Apple phone',
+      productImage: 'https://rahulshettyacademy.com/api/ecom/uploads/productImage_1767959265156.jpg',
+      productRating: '0',
+      productTotalOrders: '0',
+      productStatus: true,
+      productFor: 'women',
+      productAddedBy: 'admin',
+      __v: 0
+    },
+    {
+      _id: '6960eac0c941646b7a8b3e68',
+      productName: 'ZARA COAT 3',
+      productCategory: 'electronics',
+      productSubCategory: 'mobiles',
+      productPrice: 11500,
+      productDescription: 'Apple phone',
+      productImage: 'https://rahulshettyacademy.com/api/ecom/uploads/productImage_1767959232316.jpeg',
+      productRating: '0',
+      productTotalOrders: '0',
+      productStatus: true,
+      productFor: 'women',
+      productAddedBy: 'admin',
+      __v: 0
+    },
+    {
+      _id: '6960ea76c941646b7a8b3dd5',
+      productName: 'iphone 13 pro',
+      productCategory: 'electronics',
+      productSubCategory: 'mobiles',
+      productPrice: 55000,
+      productDescription: 'Apple phone',
+      productImage: 'https://rahulshettyacademy.com/api/ecom/uploads/productImage_1767959158182.jpg',
+      productRating: '0',
+      productTotalOrders: '0',
+      productStatus: true,
+      productFor: 'women',
+      productAddedBy: 'admin',
+      __v: 0
+    }
+  ],
+  count: 3,
+  message: 'All Products fetched Successfully'
+}
+order status 201
+{
+  orders: [ '6a7c796185b8849b4944c6a4' ],
+  productOrderId: [ '6960eae1c941646b7a8b3ed3' ],
+  message: 'Order Placed Successfully'
+}

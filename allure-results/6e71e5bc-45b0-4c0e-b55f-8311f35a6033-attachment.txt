@@ -1,0 +1,8 @@
+login status 200
+{
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODViY2ExZDEyOWUyNTAyNThiNWZlMWEiLCJ1c2VyRW1haWwiOiJqb2JzZm9ycmFodWxkQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjgwMDc3NzYxMjQsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODY1NDIxNjksImV4cCI6MTgxODA5OTc2OX0.NSqAveF61sznpadzsAN2xGZB6QcZaniL7k2YudrXXsk',
+  userId: '685bca1d129e250258b5fe1a',
+  message: 'Login Successfully'
+}
+product list status 401
+{ type: 'Invalid', message: 'Session Timeout' }
